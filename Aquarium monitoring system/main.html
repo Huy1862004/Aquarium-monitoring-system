@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>water_management</title>
+</head>
+<body> 
+    <main>
+    <div class="background"></div>
+    <div id="slidebar">
+        <nav class ="slidebar">
+            <ul>
+                <li>
+                    <a href="main.html" class="logo">
+                        <img src="./img/logo.png" alt="">
+                        <br>
+                        <span class="nav-item"><h3>Chi tiết</h3></span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="main.html">
+                        <i class="fas fa-home"></i>
+                        <span class="nav-item">Trang chủ</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="analytics.html">
+                        <i class="fas fa-chart-bar"></i> 
+                        <span class="nav-item">Analytics</span> 
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="warning.html">
+                        <i class="fas fa-warning"></i> 
+                        <span class="nav-item">Warning</span> 
+                    </a>
+                </li> -->
+                <li>
+                    <a href="contacts.html">
+                        <i class="fas fa-phone"></i> 
+                        <span class="nav-item">Contacts</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="exit.html" class="exit">
+                        <i class="fas fa-sign-out-alt"></i> 
+                        <span class="nav-item">Exit</span> 
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <div id="main">
+            <div class="grid wide">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col l-9 m-12 c-12">
+                            <div class="row">
+                                <div class="col l-8 m-12 c-12">
+                                    <div class="card row1 khung1">
+
+                                    </div>
+                                </div>
+    
+                                <div class="col l-4 m-12 c-12">
+                                    <div class="card row1">
+                                        <h1>Hệ Thống Giám Sát Hồ Cá</h1>
+                                        <h3>Cường Độ Ánh sáng</h3>
+                                        <h1 id="cuongdoas">?</h1>
+                                    </div>
+                                </div>
+                                <div class="col l-6 m-6 c-12">
+                                    <div class="card row2">
+                                        <h2>Mực Nước</h2>
+                                        <h1 id="mucnuoc">?</h1>
+                                    </div>
+                                </div>
+                                <!-- <div class="col l-4 m-6 c-12">
+                                    <div class="card row2">
+                                        <h2>Nhiệt Độ (đơn vị °F)</h2>
+                                        <h3 id ="nhietdoF   ">?</h3>
+                                    </div>
+                                </div> -->
+                                <div class="col l-6 m-6 c-12">
+                                    <div class="card row2">
+                                        <h3>Độ Đục Nước</h3>
+                                        <h1 id="doduc">?</h1>
+                                    </div>
+                                </div>
+
+                                <div class="col l-4 m-6 c-12">
+                                    <div class="card row3">
+                                        <h2>Cho Ăn</h2>
+                                        <img id="feed-image" src="img/feed_turnoff.png" alt="feed">
+                                        <button id="on_btn">On</button>
+                                        <button id="off_btn">Off</button>
+                                    </div>
+                                </div>
+                                <div class="col l-4 m-6 c-12">
+                                    <div class="card row3">
+                                        <h2>Đèn</h2>
+                                        <img id="light-image" src="img/lightbulb_turnoff.png" alt="Light">
+                                        <button id="on_btn2">On</button>
+                                        <button id="off_btn2">Off</button>
+                                    </div>
+                                </div>
+                                <div class="col l-4 m-6 c-12">
+                                    <div class="card row3">
+                                        <h2>Máy Bơm Nước</h2>
+                                        <img id="motor-image" src="img/motor_turnoff.png" alt="maybom">
+                                        <button id="hut_btn">On</button>
+                                        <button id="off_btn3">Off</button>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col l-3 m-12 c-12">
+                                <div id="clock">
+                                    <div id="time"> </div>
+                                </div>
+                                <h3 style="text-align: center; margin: 0.7em;">Máy Đo Nhiệt Độ (°C)</h3>
+                                <div class="contain">
+                                    <div class="circle" data-degree="10" data-color ="#ff2972">
+                                        <h1 id ="nhietdo">Nhiệt Độ</h1>
+                                        <!-- <span id = "nhietdo"></span> -->
+                                    </div>
+                                </div>
+            
+                            <div class="card doam">
+                                <h2>night shift</h2>
+                                <i id="toggle-icon" class="fa-regular fa-sun" style="font-size: 30px; display: block; margin-bottom: 10px;"></i>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="nightshift" unchecked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- Đóng row -->
+                </div> <!-- Đóng container -->
+            </div> <!-- Đóng grid wide -->
+        </div> <!-- Đóng main -->
+    </div> <!-- Đóng content -->
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+    <!-- lien ket voi functions.js -->
+    <script src="congtac.js"></script>
+    <script src="time.js"></script>
+
+</body>
+</html>
