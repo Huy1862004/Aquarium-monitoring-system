@@ -1,0 +1,380 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+*{
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./img/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    /* filter: blur(1px); hiệu ứng làm mờ */
+    z-index: -1; /* Đặt nền dưới nội dung */
+    transition: background-image 0.5s ease; /*hiệu ứng chuyển đổi */
+}
+
+.backgroundana {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./img/sa.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(1px);
+    z-index: -1; /* Đặt nền dưới nội dung */
+    transition: background-image 0.5s ease; /*hiệu ứng chuyển đổi */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Đảm bảo nội dung ở trên nền */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+/* Khung lớn bao quanh */
+.container {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(5, 5, 5, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Khung nhỏ cho mỗi thẻ div bên trong */
+.card {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    margin-bottom: 20px;
+}
+
+.cardct {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    margin-bottom: 20px;
+}
+
+#time {
+    text-align: center;
+    font-size: 40px;
+}
+/*----------------------------*/
+.row1{
+    max-height: 200px;
+    min-height: 200px;
+    background-color: rgba(21, 20, 20, 0.4);
+
+}
+.row2{
+    max-height: 200px;
+    min-height: 100px;
+    background-color: rgb(133, 126, 126);
+
+}
+.row3{
+    max-height: 200px;
+    min-height: 200px;
+    background-color: rgb(255, 255, 255,0.5);
+
+}
+
+/*-------------------------*/
+/* Khung hình ảnh */
+.khung1 {
+    background-image: url('./img/nhadep.jpg');
+    background-size: cover; 
+    background-position: center; 
+    width: 100%; 
+    height: 100%; 
+}
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+#slidebar {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: rgb(198, 195, 198);
+    width: 90px;        /* Đảm bảo phần tử này không bị trùng với content */
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(184, 183, 183, 0.3);
+    opacity: 0.9;
+}
+#slidebar .logo {
+    text-align: center;
+    display:flex;
+    transition: all 0.5s ease;
+    Margin: 10px 0 0 10px;
+}
+#slidebar .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#slidebar.logo span {
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+#slidebar .logo:hover {
+    background-color: initial;
+    /* Thêm các thuộc tính khác nếu cần */
+}
+#slidebar a {
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+#slidebar a:hover {
+    background-color: rgb(103, 133, 181);
+}
+#slidebar:hover {
+    width: 280px;
+    transition: all 0.5s ease;
+}
+#slidebar .fas {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+#slidebar .nav-item {
+    position: relative;
+    top: 12px;
+    margin-left: 20px;
+}
+#slidebar .exit {
+    position: absolute;
+    bottom: 0;
+}
+/*------------*/
+/* phải ngoài cùng */
+.contain{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+.contain .circle{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13em;
+    width: 13em;
+    flex-direction: column;
+    border-radius: 50%;
+}
+.contain .circle::before{
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border-radius: 50%;
+    background: #222;
+    opacity: 0.7;
+}
+.contain .circle::after{
+    content: '';
+    position: absolute;
+    width: 9em;
+    height: 9em;
+    background: #333;
+    border: 15px solid #4d4c51;
+    border-radius: 50%;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.25),
+            0 -5px 10px rgba(0,0,0,0.75),
+            0 -2px 2px rgba(255,255,255,0.5),
+            inset 0 -2px 2px rgba(255,255,255,0.5);   
+}
+.contain .circle:hover {
+    transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+    transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển tiếp */
+}
+
+.contain H1{
+    color: white;
+    z-index: 2;
+}
+/*---------------------------------------------*/
+/* Thiết kế nút bật tắt (toggle switch) */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+input:checked+.slider {
+    background-color: rgb(0, 183, 255);
+  }
+  
+input:checked+.slider:before {
+    transform: translateX(26px);
+  }
+/*------------------*/
+/* Nút chuyển trang  */
+#slidebar .card {
+    padding: 10px;
+    text-align: center;
+    background-color: #3b3ea0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#slidebar .card a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+}
+
+#slidebar .card:hover {
+    background-color: #007bff; /* Màu nền khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ khi hover */
+}
+
+#slidebar .card a span {
+    color: white; /* Màu chữ khi hover */
+}
+
+#slidebar .card a:hover span {
+    color: white; /* Đổi màu chữ khi hover vào link */
+}
+/*---------------------*/
+/* 3 thẻ công tắc */
+.card img {
+    width: 65%;
+    height: 3.7rem;
+    max-width: 100%; 
+    border-radius: 50%;
+    margin: 1em;
+}
+
+.cardct img {
+    width: 50%;
+    height: 50%;
+    max-width: 100%; 
+    border-radius: 100%;
+    margin: 1em;
+}
+/* Định dạng nút mặc định */
+button {
+    padding: 5% 10%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s; 
+    background-color: 0.2s;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Đổ bóng */
+
+}
+
+/* Khi bấm vào nút, thay đổi màu và tạo hiệu ứng scale */
+button:active {
+    transform: scale(0.95); /* Hiệu ứng nhỏ lại khi bấm */
+}
+
+/* Nút On */
+#on_btn, #on_btn2, #hut_btn {
+    background-color: green;
+    color: white;
+}
+
+/* Nút Off */
+#off_btn, #off_btn2, #off_btn3 {
+    background-color: red;
+    color: white;
+}
+
+/* Thêm hiệu ứng màu khi bật (On) */
+.on-active {
+    background-color: lightgreen;
+}
+
+/* Thêm hiệu ứng màu khi tắt (Off) */
+.off-active {
+    background-color: lightcoral;
+}
+/*---------------------------------------------------------------------------------------------------*/
+
+p {
+    color:white;
+}
+
+p1 {
+    font-weight: bold;
+    color:rgb(255, 251, 0);
+}
+
+p2 {
+    font-weight: bold;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="analytics.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Analytics</title>
+</head>
+<body>
+    <main>
+        <div class="backgroundana"></div>
+        <div id="slidebar">
+            <nav class ="slidebar">
+                <ul>
+                    <li>
+                        <a href="main.html" class="logo">
+                            <img src="./img/logo.png" alt="">
+                            <br>
+                            <span class="nav-item"><h3>Chi tiết</h3></span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="main.html">
+                            <i class="fas fa-home"></i>
+                            <span class="nav-item">Trang chủ</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="analytics.html">
+                            <i class="fas fa-chart-bar"></i> 
+                            <span class="nav-item">Analytics</span> 
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="warning.html">
+                            <i class="fas fa-warning"></i> 
+                            <span class="nav-item">Warning</span> 
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="contacts.html">
+                            <i class="fas fa-phone"></i> 
+                            <span class="nav-item">Contacts</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="exit.html" class="exit">
+                            <i class="fas fa-sign-out-alt"></i> 
+                            <span class="nav-item">Exit</span> 
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <div id="main">
+                <div class="grid wide">
+                    <!-- khung chart mực nước -->
+                    <div class="row">
+                        <div class="col l-4 m-2 c-0">
+                            <div class="card1 row_ana" style="color: blue;">
+                                <h2>Mực nước</h2>
+                                <h1 id="mucnuoc">?</h1>
+                            </div>
+                        </div>
+    
+                        <div class="col l-8 m-10 c-12">
+                            <div class="card1 row_ana">
+                                <canvas id="mucNuocChart" width="600" height="200 color='white'"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- khung chart nhiệt độ -->
+                    <div class="row">
+                        <div class="col l-4 m-2 c-0">
+                            <div class="card1 row_ana" style="color: red;">
+                                <h2>Nhiệt độ</h2>
+                                <h1 id ="nhietdo">?</h1>
+                            </div>
+                        </div>
+    
+                        <div class="col l-8 m-10 c-12">
+                            <div class="card1 row_ana">
+                                <canvas id="nhietDoChart" width="600" height="200 color='white'"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- khung chart độ đục nước -->
+                    <div class="row">
+                        <div class="col l-4 m-2 c-0">
+                            <div class="card1 row_ana" style="color: grey;">
+                                <h2>Độ đục nước</h2>
+                                <h1 id="doduc">?</h1>
+                            </div>
+                        </div>
+    
+                        <div class="col l-8 m-10 c-12">
+                            <div class="card1 row_ana">
+                                <canvas id="ducNuocChart" width="600" height="200 color='white'"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- khung chart cường độ ánh sáng -->
+                    <div class="row">
+                        <div class="col l-4 m-3 c-0">
+                            <div class="card1 row_ana" style="color: yellow;">
+                                <h2>Cường độ ánh sáng</h2>
+                                <h1 id="cuongdoas">?</h1>
+                            </div>
+                        </div>
+    
+                        <div class="col l-8 m-9 c-12">
+                            <div class="card1 row_ana">
+                                <canvas id="CDASChart" width="600" height="200 color='white'"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end -->
+                   
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+
+    <script src="chart.js"></script>
+</body>
+</html>
